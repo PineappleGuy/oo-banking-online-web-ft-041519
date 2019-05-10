@@ -3,7 +3,6 @@ require 'pry'
 class Transfer
 
 attr_accessor :sender, :receiver, :status, :amount
-attr_reader
 
   def initialize(sender, receiver, amount)
     @sender = sender
@@ -11,4 +10,11 @@ attr_reader
     @amount = amount
     @status = "pending"
   end
+
+  def valid?
+    if @sender.valid? == true && @receiver.valid? == true
+      true
+    else 
+      false
+    end
 end
