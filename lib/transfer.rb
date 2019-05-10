@@ -20,7 +20,7 @@ attr_accessor :sender, :receiver, :status, :amount
   end
 
   def execute_transaction
-    if @sender.balance > @amount
+    if @sender.balance > @amount && @status != "complete"
       @sender.balance -= @amount
       @receiver.balance += @amount
       @status = "complete"
@@ -31,6 +31,7 @@ attr_accessor :sender, :receiver, :status, :amount
   end
 
   def reverse_transfer
+    if @status != "reversed"
       @sender.balance += @amount
       @receiver.balance -= @amount
       @status = "reversed"
