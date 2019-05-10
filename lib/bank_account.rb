@@ -21,7 +21,7 @@ class BankAccount
     if @status == "open" && @balance > 0
       true
     end
-    binding.pry
+    #binding.pry
   end
 
 end
