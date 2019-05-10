@@ -18,4 +18,13 @@ attr_accessor :sender, :receiver, :status, :amount
       false
     end
   end
+
+  def execute_transaction
+    
+  end
+
+  def reverse_transfer
+
+  end
+
 end
