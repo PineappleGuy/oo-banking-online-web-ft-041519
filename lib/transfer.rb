@@ -2,7 +2,7 @@ require 'pry'
 
 class Transfer
 
-attr_accessor :sender, :receiver, :status
+attr_accessor :sender, :receiver, :status, :amount
 attr_reader
 
   def initialize(sender, receiver, amount)
