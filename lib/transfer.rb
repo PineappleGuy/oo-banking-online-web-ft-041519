@@ -8,4 +8,5 @@ attr_reader
   def initialize(sender, receiver, amount)
     @amount = amount
     @status = "pending"
+  end
 end
